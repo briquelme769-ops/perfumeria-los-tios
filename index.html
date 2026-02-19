@@ -4,48 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfumeria Los Tios</title>
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="hero">
-            <h1>Welcome to Perfumeria Los Tios</h1>
-            <p>Discover the essence of elegance and luxury in each bottle.</p>
-            <a href="#featured" class="btn">Shop Now</a>
-        </div>
+        <h1>Perfumeria Los Tios</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="featured">
-        <h2>Featured Products</h2>
-        <div class="products">
-            <!-- Featured product listings will go here -->
-        </div>
-    </section>
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Price: $20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Price: $25.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <!-- Additional products can be added here -->
+            </div>
+        </section>
 
-    <section id="categories">
-        <h2>Categories</h2>
-        <div class="category-list">
-            <!-- Categories will go here -->
-        </div>
-    </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>Shopping Cart</h3>
+                    <div class="cart-items"></div>
+                    <button id="checkout-button">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
 
-    <section id="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonials">
-            <!-- Testimonials will go here -->
-        </div>
-    </section>
-
-    <section id="newsletter">
-        <h2>Subscribe to our Newsletter</h2>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                <button type="submit">Pay</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2026 Perfumeria Los Tios. All Rights Reserved.</p>
+        <p>&copy; 2026 Perfumeria Los Tios</p>
     </footer>
 </body>
 </html>
